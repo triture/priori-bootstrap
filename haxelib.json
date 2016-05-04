@@ -1,0 +1,13 @@
+{
+  "name": "priori-bootstrap",
+  "url": "https://github.com/triture/priori-bootstrap",
+  "license": "MIT",
+  "tags": [ "html5", "web", "js", "javascript", "priori", "spa", "cross", "webapp"],
+  "description": "Bootstrap for Priori",
+  "version": "0.0.1",
+  "releasenote": "Initial release. Fully functional but many things are changing yet.",
+  "contributors": [ "triture" ],
+  "dependencies": {
+    "priori" : ""
+  }
+}
