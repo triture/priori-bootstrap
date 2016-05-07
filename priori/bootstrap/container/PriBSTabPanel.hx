@@ -1,6 +1,7 @@
 package priori.bootstrap.container;
 
-import priori.style.border.BorderStyle;
+import priori.style.border.PriBorderType;
+import priori.style.border.PriBorderStyle;
 import priori.view.PriDisplay;
 import priori.event.PriEvent;
 import priori.view.container.PriContainer;
@@ -90,7 +91,7 @@ class PriBSTabPanel extends PriGroup {
         super.addChild(this.tabs);
 
         this.container = new PriContainer();
-        this.container.border = new BorderStyle();
+        this.container.border = new PriBorderStyle(1, 0xCCCCCC, PriBorderType.SOLID);
         super.addChild(this.container);
 
         if (this.tabs.selected != null) {
