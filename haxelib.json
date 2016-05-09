@@ -4,8 +4,8 @@
   "license": "MIT",
   "tags": [ "html5", "web", "js", "javascript", "priori", "spa", "cross", "webapp"],
   "description": "Bootstrap for Priori",
-  "version": "0.0.1",
-  "releasenote": "Initial release. Fully functional but many things are changing yet.",
+  "version": "0.0.2",
+  "releasenote": "Change Class names : BorderStyle to PriBorderStyle : BorderType to PriBorderType",
   "contributors": [ "triture" ],
   "dependencies": {
     "priori" : ""
