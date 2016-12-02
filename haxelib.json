@@ -4,8 +4,8 @@
   "license": "MIT",
   "tags": [ "html5", "web", "js", "javascript", "priori", "spa", "cross", "webapp"],
   "description": "Bootstrap for Priori",
-  "version": "0.0.2",
-  "releasenote": "Change Class names : BorderStyle to PriBorderStyle : BorderType to PriBorderType",
+  "version": "0.1.0",
+  "releasenote": "New Feature: PriBSFormTextArea",
   "contributors": [ "triture" ],
   "dependencies": {
     "priori" : ""
