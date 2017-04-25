@@ -3,8 +3,8 @@ package priori.bootstrap;
 import priori.bootstrap.type.PriBSContextualType;
 import priori.view.component.PriExtendable;
 import priori.event.PriEvent;
-import jQuery.Event;
-import jQuery.JQuery;
+import js.jquery.Event;
+import js.jquery.JQuery;
 
 class PriBSNavTab extends PriExtendable {
 
@@ -47,7 +47,8 @@ class PriBSNavTab extends PriExtendable {
         var n:Int = this._menuItens.length;
 
         while (i < n) {
-            this._menuItens[i].view.on("click", i, this._onItemClick);
+            var data:Dynamic = i;
+            this._menuItens[i].view.on("click", data, this._onItemClick);
 
             i++;
         }

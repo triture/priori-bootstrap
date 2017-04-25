@@ -1,7 +1,7 @@
 package priori.bootstrap;
 
-import jQuery.JQuery;
-import jQuery.Event;
+import js.jquery.Event;
+import js.jquery.JQuery;
 import priori.view.form.PriFormElementBase;
 import priori.event.PriEvent;
 
@@ -29,7 +29,7 @@ class PriBSFormDatePicker extends PriFormElementBase {
 
         this.binderElement.append(binderInside);
 
-        this._baseElement.datepicker({
+        (cast this._baseElement).datepicker({
                 weekStart: 1,
                 todayBtn: "linked",
                 calendarWeeks: calendarWeeks,
@@ -63,13 +63,13 @@ class PriBSFormDatePicker extends PriFormElementBase {
     }
 
     override private function onAddedToApp():Void {
-        this._baseElement.datepicker().on("changeDate", _onChange);
-        this._baseElement.datepicker().on("clearDate", _onClear);
+        (cast this._baseElement).datepicker().on("changeDate", _onChange);
+        (cast this._baseElement).datepicker().on("clearDate", _onClear);
     }
 
     override private function onRemovedFromApp():Void {
-        this._baseElement.datepicker().off("changeDate", _onChange);
-        this._baseElement.datepicker().off("clearDate", _onClear);
+        (cast this._baseElement).datepicker().off("changeDate", _onChange);
+        (cast this._baseElement).datepicker().off("clearDate", _onClear);
     }
 
     private function removeTime(value:Date):Date {
@@ -77,17 +77,17 @@ class PriBSFormDatePicker extends PriFormElementBase {
     }
 
     public function hide():Void {
-        this._baseElement.datepicker("hide");
+        (cast this._baseElement).datepicker("hide");
     }
 
     private function _onClear(event:Event):Void {
-        if (this._baseElement.datepicker("getDate") == null) {
+        if ((cast this._baseElement).datepicker("getDate") == null) {
             this.value = this._dateValue;
         }
     }
 
     @:noCompletion private function _onChange(event:Event):Void {
-        if (this._baseElement.datepicker("getDate") == null) {
+        if ((cast this._baseElement).datepicker("getDate") == null) {
             this.value = this._dateValue;
         } else {
             this._dateValue = this.value;
@@ -101,7 +101,7 @@ class PriBSFormDatePicker extends PriFormElementBase {
         this._dateValue = value;
 
         this._dispatchChange = false;
-        this._baseElement.datepicker("setDate", value);
+        (cast this._baseElement).datepicker("setDate", value);
         this._dispatchChange = true;
 
         return value;
@@ -110,7 +110,7 @@ class PriBSFormDatePicker extends PriFormElementBase {
     @:noCompletion private function get_value():Date {
         var result:Date = this._dateValue;
 
-        result = this._baseElement.datepicker("getDate");
+        result = (cast this._baseElement).datepicker("getDate");
 
         return result;
     }
@@ -136,7 +136,7 @@ class PriBSFormDatePicker extends PriFormElementBase {
 
     override public function kill():Void {
         if (this._baseElement != null) {
-            this._baseElement.datepicker("remove");
+            (cast this._baseElement).datepicker("remove");
             this._baseElement.off();
         }
 
