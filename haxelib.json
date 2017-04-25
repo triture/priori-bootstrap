@@ -4,8 +4,8 @@
   "license": "MIT",
   "tags": [ "html5", "web", "js", "javascript", "priori", "spa", "cross", "webapp"],
   "description": "Bootstrap for Priori",
-  "version": "0.1.0",
-  "releasenote": "New Feature: PriBSFormTextArea",
+  "version": "0.1.1",
+  "releasenote": "Update to jQueryExtern 3.0.0",
   "contributors": [ "triture" ],
   "dependencies": {
     "priori" : ""
